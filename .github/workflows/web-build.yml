@@ -38,6 +38,7 @@ jobs:
           name: BRUS-web-test
           path: build/web/
           retention-days: 14
+      # Each new commit starts a fresh workflow run, avoiding duplicate Pages artifacts on reruns.
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
